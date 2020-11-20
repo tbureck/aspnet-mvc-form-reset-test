@@ -1,0 +1,29 @@
+﻿@model CheckBoxTestModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div id="form">
+    <form asp-route="PostTest">
+        <div class="form-group">
+            <label asp-for="MandatoryField">Mandatory field</label>
+            <input class="form-control" asp-for="MandatoryField" />
+        </div>
+        <div class="form-group">
+            <label asp-for="OptionalField">Optional field</label>
+            <input class="form-control" asp-for="OptionalField" />
+        </div>
+        <div class="form-group">
+            <input class="form-check-input" asp-for="Accept" />
+            <label asp-for="Accept">I accept</label>
+        </div>
+        
+        <button class="btn btn-primary" name="button">Submit</button>
+    </form>
+</div>

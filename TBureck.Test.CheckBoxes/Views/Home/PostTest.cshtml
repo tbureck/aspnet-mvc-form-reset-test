@@ -1,0 +1,11 @@
+@model CheckBoxTestModel
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Submitted data</h2>
+
+<strong>Mandatory field: </strong> @(Model.MandatoryField ?? "")<br>
+<strong>Optional field: </strong> @(Model.OptionalField ?? "")<br>
+<strong>Accept: </strong> @(Model.Accept ? "Yes" : "No")
